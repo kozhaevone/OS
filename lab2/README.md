@@ -37,3 +37,9 @@
 - **lvs** - вывод информации о logical volume;  
 - **vgs** - отображение volume group, информация об этих группах;  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/12.inf_dop.PNG)  
+
+# Задание 2  
+1. В процессе работы у нас отказывает один ssd, и нам требуется восстановить все его данные. При проверке ВМ на работоспособность после отключения SSD мы можем увидеть, что, действительно, остался только один диск.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/1.ssd_upal.png)  
+2. Проверим статус RAID-массива с помощью команды: cat /proc/mdstat  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/2.status_RAID.png)  
