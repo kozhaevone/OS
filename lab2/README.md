@@ -67,12 +67,11 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/6.vgs.png)
 6. Удалим ssd3 диск и добавим ssd5, hdd1, hdd2. Затем снова скопируем таблицу разделов на новый ssd, скопируем /boot и установим grub. Изменяем размер второго раздела (ssd5) c помощью *fdisk /dev/xxx*.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/8.SSD5.png)
-7. Добавим SSD 5 в RAID массив и увеличим размеры разедела на обоих дисках:  
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/10.RAID.png)
-8. Увеличим размеры самого массива:
-
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/11.massiv.png)
-9. Увеличим размеры VG и самих root и var, и получим конечный результат работы с SSD:
+7. Добавим SSD5 в RAID массив и увеличим размеры раздела на обоих дисках:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/10.RAID.png)  
+8. Увеличим размеры самого массива.
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/11.massiv.png)  
+9. Увеличим размеры VG и самих root и var, и получим конечный результат работ с SSD:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/12.VG.png)
 10. Создадим на HHD логический том и отформатируем их под ext4:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/13.HHD.png)
@@ -84,4 +83,4 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/16.pokas.png)
 14. Последние показания о дисках и RAID:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/17.finish.png)
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/18.finish.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/18.finish.png)   
