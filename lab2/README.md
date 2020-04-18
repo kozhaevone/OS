@@ -43,3 +43,11 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/1.ssd_upal.png)  
 2. Проверим статус RAID-массива с помощью команды: cat /proc/mdstat  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/2.status_RAID.png)  
+3. Создаем в ВМ новый диск и называем его ssd3. Убедимся, что диск был успешно добавлен командой *fdisk -l*.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/3.fdisk.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/4.fdisk(2).png)  
+4. Скопировали таблицу разделов со старого диска на новый с помощью команды sfdisk *-d /dev/sda | sfdisk /dev/sdb*. Затем добавляем raid в sdb2 c помощью команды *mdadm --manage /dev/md0 --add /dev/sdb2*. Посмотрим информацию о дисках после замены SSD на новый и добавления его в RAID.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/7.inf.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/6.mdadm.png)  
+5. Осталось скопировать /boot, установить grup и выполнить перезагрузку ВМ. В результате всех этих действий мы успешно восстановили диск.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/9.finish.png)  
