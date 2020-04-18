@@ -69,7 +69,6 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/8.SSD5.png)
 7. Добавим SSD 5 в RAID массив и увеличим размеры разедела на обоих дисках.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/10.RAID.png)
-И увеличим размеры самого массива:
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/0.proba.png)  
 9. Увеличим размеры VG и самих root и var и получим конечный результат работы с SSD:
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/12.VG.png)
