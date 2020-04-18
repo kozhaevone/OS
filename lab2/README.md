@@ -41,7 +41,7 @@
 # Задание 2  
 1. В процессе работы у нас отказывает один ssd, и нам требуется восстановить все его данные. При проверке ВМ на работоспособность после отключения SSD мы можем увидеть, что, действительно, остался только один диск.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/1.ssd_upal.png)  
-2. Проверим статус RAID-массива с помощью команды: cat /proc/mdstat  
+2. Проверим статус RAID-массива с помощью команды: *cat /proc/mdstat*  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/2.status_RAID.png)  
 3. Создаем в ВМ новый диск и называем его ssd3. Убедимся, что диск был успешно добавлен командой *fdisk -l*.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/3.fdisk.png)  
@@ -70,6 +70,7 @@
 7. Добавим SSD 5 в RAID массив и увеличим размеры разедела на обоих дисках:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/10.RAID.png)
 8. Увеличим размеры самого массива:
+
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/11.massiv.png)
 9. Увеличим размеры VG и самих root и var, и получим конечный результат работы с SSD:
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/12.VG.png)
