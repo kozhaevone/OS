@@ -65,3 +65,22 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/5.LVM.png)  
 5. Далее следует увеличить VG с помощью команды: *vgextend system /dev/md63*, а также переместить данные со старого диска на новый. После чего изменим VG, удалив оттуда RAID старого диска - *vgreduce system /dev/md0*.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/6.vgs.png)
+6. Удалим ssd3 диск и добавим ssd5, hdd1, hdd2. Затем снова скопируем таблицу разделов на новый ssd, скопируем /boot и установим grub. Изменяем размер второго раздела (ssd5) c помощью *fdisk /dev/xxx*.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/8.SSD5.png)
+7. Добавим SSD 5 в RAID массив и увеличим размеры разедела на обоих дисках:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/9.SSD(2).png)
+8. Увеличим размеры самого массива.
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/11.massiv.png)
+9. Увеличим размеры VG и самих root и var, и получим конечный результат работы с SSD:
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/12.VG.png)
+10. Создадим на HHD логический том и отформатируем их под ext4:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/13.HHD.png)
+11. Перемонтировали варлоги:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/14.varl.png)
+12. Изменяем fstab:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/15.fstab.png)
+13. Снимем последние pvs, lvs и vgs показания:
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/16.pokas.png)
+14. Последние показания о дисках и RAID:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/17.finish.png)
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/18.finish.png)  
