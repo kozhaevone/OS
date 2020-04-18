@@ -18,8 +18,8 @@
 4. Настраиваем RAID.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/4.RAID.png)  
 5. Далее начинаем настройку LVM и создаём группу томов.  
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/5.LWM.png)  
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/6.LWM_step2.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/5.LVM.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/6.LVM_step2.png)  
 6. Для каждого тома сделали соответствующие им точки монтирования и завершили настройку LVM.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/7.Finish_LWM.PNG)  
 7. После "разметки дисков" устанавливаем GRUB на 1 устройство sda и загружаем систему.  
