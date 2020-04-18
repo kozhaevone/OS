@@ -83,4 +83,4 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/16.pokas.png)
 14. Последние показания о дисках и RAID:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/17.finish.png)
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/18.finish.png) 
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/18.finish.png)
