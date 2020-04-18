@@ -23,7 +23,7 @@
 6. Для каждого тома сделали соответствующие им точки монтирования и завершили настройку LVM.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/7.Finish_LWM.PNG)  
 7. После "разметки дисков" устанавливаем GRUB на 1 устройство sda и загружаем систему.  
-![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/9.Grub_disk1.PNG)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/9.Grub_disk1.PNG)
 8. Выполнили копирование содержимого раздела /boot с диска sda(ssd1) на диск sdb(ssd2). Посмотрели информацию о дисках с помощью команд:  
 - **fdisk -l** - смотрим имеющиеся диски и разделы;
 - **lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT** - команда показывает: название дисков и разделов, тип файловой системы, размер всего диска и каждого раздела, а также точки монтирования.  
