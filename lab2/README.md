@@ -61,7 +61,7 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/3.SSD4.png)  
 3. Создаём новый raid массив с включением туда только одного ssd - *mdadm --create --verbose /dev/md63 --force --level=1 --raid-devices=1 /dev/sdb2*.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/4.RAID.png)  
-4. Настроим LVM. Создадим новый физический том, включив в него ранее созданый RAID.  
+4. Настроим LVM. Создадим новый физический том, включив в него ранее созданный RAID.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/5.LVM.png)  
 5. Далее следует увеличить VG с помощью команды: *vgextend system /dev/md63*, а также переместить данные со старого диска на новый. После чего изменим VG, удалив оттуда RAID старого диска - *vgreduce system /dev/md0*.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/6.vgs.png)
@@ -69,7 +69,9 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/8.SSD5.png)
 7. Добавим SSD 5 в RAID массив и увеличим размеры разедела на обоих дисках.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/10.RAID.png)
-9. Увеличим размеры VG и самих root и var, и получим конечный результат работы с SSD:
+8. И увеличим размеры самого массива:
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/0.proba.png)  
+9. Увеличим размеры VG и самих root и var и получим конечный результат работы с SSD:
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/12.VG.png)
 10. Создадим на HHD логический том и отформатируем их под ext4:  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/13.HHD.png)
