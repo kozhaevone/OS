@@ -17,10 +17,10 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/3.memory.png)  
 4. Настраиваем RAID.
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/4.RAID.png)  
-5. Далее начинаем настройку LWM и создаём группу томов.  
+5. Далее начинаем настройку LVM и создаём группу томов.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/5.LWM.png)  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/6.LWM_step2.png)  
-6. Для каждого тома сделали соответствующие им точки монтирования и завершили настройку LWM.  
+6. Для каждого тома сделали соответствующие им точки монтирования и завершили настройку LVM.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/7.Finish_LWM.PNG)  
 7. После "разметки дисков" устанавливаем GRUB на 1 устройство sda и загружаем систему.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task1/9.Grub_disk1.PNG)  
@@ -51,3 +51,17 @@
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/6.mdadm.png)  
 5. Осталось скопировать /boot, установить grup и выполнить перезагрузку ВМ. В результате всех этих действий мы успешно восстановили диск.  
 ![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task2/9.finish.png)  
+
+# Задание 3
+**В этом задании у нас падает еще один SSD, мы заменяем его на новый объемом 7 Гб и добавляем 2 новых HDD. Благодаря LVM и RAID мы смогли восстановить наши данные и включили новый SSD в наш volume group.**  
+1. После удаления ssd2 посмотрим текущее состояние дисков и RAID:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/1.delete_ssd2.png)  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/2.inf_RAID.png)  
+2. Далее после добавления SSD4, копирования на него таблицы разделов и перемонтирования /boot, а также после установки grub, мы можем посмотреть новую информацию о дисках:  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/3.SSD4.png)  
+3. Создаём новый raid массив с включением туда только одного ssd - *mdadm --create --verbose /dev/md63 --force --level=1 --raid-devices=1 /dev/sdb2*.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/4.RAID.png)  
+4. Настроим LVM. Создадим новый физический том, включив в него ранее созданый RAID.  
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/5.LVM.png)  
+5. Далее следует увеличить VG с помощью команды: *vgextend system /dev/md63*, а также переместить данные со старого диска на новый. После чего изменим VG, удалив оттуда RAID старого диска - *vgreduce system /dev/md0*.
+![Image alt](https://github.com/kozhaevone/OS/blob/master/lab2/Screenshots/Task3/6.vgs.png)
